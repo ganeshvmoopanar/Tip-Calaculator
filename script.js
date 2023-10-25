@@ -32,25 +32,17 @@ function updateTipPercentage() {
 }
 
 const backgrounds = ['1.avif', '2.avif', '3.avif', '4.avif', '5.avif', '6.avif', '7.avif', '8.avif', '9.avif', '10.avif', '11.avif', '12.avif', '13.avif', '14.avif', '15.avif', '16.avif', '17.avif', '18.avif', '19.avif', '20.avif'];
-
-
-let currentBackgroundIndex = backgrounds.length - 1;
-
+let currentBackgroundIndex = 0;
 
 function changeBackground() {
-    if (currentBackgroundIndex < 0) {
-        currentBackgroundIndex = backgrounds.length - 1; 
-    }
-
-    const imageUrl = backgrounds[currentBackgroundIndex];
+    const randomIndex = Math.floor(Math.random() * backgrounds.length); 
+    const imageUrl = backgrounds[randomIndex];
     document.body.style.backgroundImage = `url(${imageUrl})`;
-
-    currentBackgroundIndex--;
 }
 
 changeBackground();
-
 setInterval(changeBackground, 5000);
+
 
   
 
