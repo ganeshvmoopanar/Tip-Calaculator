@@ -1,1 +1,1 @@
-# lab3
+# Tip Calaculator
